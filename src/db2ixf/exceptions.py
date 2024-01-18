@@ -109,7 +109,19 @@ class VarCharLengthException(Exception):
     def __init__(self, message):
         self.message = message
         super().__init__(self.message)
+        
+class VarGraphicLengthException(Exception):
+    """
+    Exception raised when encountering vargraphic data type with a length
+    exceeding the maximum length.
 
+    Read the
+    [doc](https://www.ibm.com/docs/en/db2/11.5?topic=format-pcixf-data-types).
+    """
+
+    def __init__(self, message):
+        self.message = message
+        super().__init__(self.message)
 
 class CLOBCodePageException(Exception):
     """
